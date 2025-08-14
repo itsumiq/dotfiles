@@ -1,0 +1,4 @@
+config/dwm/*
+config/slstatus/*
+!config/dwm/config.h
+!config/slstatus/config.h

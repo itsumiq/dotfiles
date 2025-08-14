@@ -1,0 +1,12 @@
+tab_bar_edge top
+tab_bar_style powerline
+tab_bar_align center
+
+font_family JetBrains Mono
+font_size 11.0
+
+
+# BEGIN_KITTY_THEME
+# 3024 Night
+include current-theme.conf
+# END_KITTY_THEME

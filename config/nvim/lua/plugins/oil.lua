@@ -1,0 +1,35 @@
+return {}
+-- return {
+-- 	"stevearc/oil.nvim",
+-- 	config = function()
+-- 		require("oil").setup({
+-- 			confirmation = {
+-- 				border = "none",
+-- 			},
+-- 			view_options = {
+-- 				show_hidden = true,
+-- 			},
+-- 			columns = {
+-- 				"icon",
+-- 				"git_status",
+-- 				"size",
+-- 				"mtime",
+-- 			},
+-- 			git = {
+-- 				add = function(path)
+-- 					return vim.fn.system({"git", "add", "--", path})
+-- 				end,
+-- 				mv = function(src_path, dest_path)
+-- 					return vim.fn.system({"git", "mv", "--", src_path, dest_path})
+-- 				end,
+-- 				rm = function(path)
+-- 					return vim.fn.system({"git", "rm", "--", path})
+-- 				end,
+-- 			},
+-- 			keymaps = {
+-- 				["q"] = "actions.close",
+-- 			},
+-- 		})
+-- 		vim.keymap.set("n", "<leader>e", "<CMD>Oil<CR>", { desc = "Open Oil file manager" })
+-- 	end,
+-- }
