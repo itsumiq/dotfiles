@@ -7,7 +7,6 @@ return {
 	},
 	config = function()
 		require("neo-tree").setup({
-			-- Плавающее окно
 			popup_border_style = "rounded",
 			default_component_configs = {
 				git_status = {
@@ -27,12 +26,29 @@ return {
 						hint = "",
 						info = "",
 						warn = "",
-						error = "",
+						error = "e",
 					}
 				},
 			},
+			renderers = {
+				directory = {
+					{ "indent" },
+					{ "icon" },
+					{ "current_filter" },
+					{ "name" },
+					{ "diagnostics" },
+					{ "git_status",    highlight = "NeoTreeDimText" },
+				},
+				file = {
+					{ "indent" },
+					{ "icon" },
+					{ "name",       use_git_status_colors = true },
+					{ "diagnostics" },
+					{ "git_status", highlight = "NeoTreeDimText" },
+				},
+			},
 			window = {
-				position = "float", -- плавающее окно
+				position = "float",
 				max_width = 60,
 				max_height = 25,
 			},

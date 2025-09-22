@@ -29,18 +29,27 @@ return {
 		local lspconfig = require("lspconfig")
 		local servers = {
 			gopls = {
-				usePlaceholders = true,
-				completeUnimported = true,
-				experimentalPostfixCompletions = true,
-				telemetry = {
-					enable = false,
-				},
-				analyses = {
-					fieldalignment = true,
-					fillstruct = true,
-				},
-				hints = {
-					compositeLiteralFields = true,
+				settings = {
+					gopls = {
+						-- usePlaceholders = true,
+						completeUnimported = true,
+						experimentalPostfixCompletions = true,
+						hints = {
+							compositeLiteralFields = true,
+						},
+						buildFlags = {
+							"-tags=integration",
+						},
+						staticcheck = true,
+						analyses = {
+							unusedparams = true,
+							unusedwrite  = true,
+							nilness      = true,
+							printf       = true,
+							-- shadow       = true,
+						},
+					},
+
 				},
 			},
 			lua_ls = {
@@ -62,6 +71,17 @@ return {
 						completion = {
 							callSnippet = "Replace",
 						},
+					},
+				},
+			},
+			rust_analyzer = {
+				settings = {
+					["rust-analyzer"] = {
+						cargo = { allFeatures = true },
+						check = { command = "clippy" },
+						procMacro = { enable = true },
+						inlayHints = { enable = true },
+						diagnostics = { enable = true },
 					},
 				},
 			},
