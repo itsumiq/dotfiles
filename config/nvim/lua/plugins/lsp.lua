@@ -86,6 +86,14 @@ return {
 				},
 			},
 			dockerls = {},
+			protols = {},
+
+			ts_ls = {},
+			eslint = {},
+			tailwindcss = {},
+			cssls = {},
+			html = {},
+			jsonls = {},
 		}
 
 		for server, config in pairs(servers) do
